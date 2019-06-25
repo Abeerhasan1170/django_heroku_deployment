@@ -7,7 +7,7 @@
 4.Create a file named Procfile in your django projeact directory (P is in uppercase).
 
 5.Configure settings.py in the following way:
-	i.In INSTALLED_APP write a new app called 'whitenoise.runserver_nostatic'.
+	i.In INSTALLED_APPS write a new app called 'whitenoise.runserver_nostatic'.
 	ii.Write a new line of code before STATIC_URL, which is STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles').
 	iii.At the bottom write STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'.
 
