@@ -1,0 +1,29 @@
+1.Install git in your system.
+
+2.Install gunicorn in your system => pip3 install gunicorn.
+
+3.Install whitenoise in your system => pip3 install whitenoise.
+
+4.Create a file named Procfile in your django projeact directory (P is in uppercase).
+
+5.Configure settings.py in the following way:
+	i.In INSTALLED_APP write a new app called 'whitenoise.runserver_nostatic'.
+	ii.Write a new line of code before STATIC_URL, which is STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles').
+	iii.At the bottom write STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'.
+
+6.Install heroku in your system => sudo snap install --classic heroku
+
+7.Go to your project directory and open terminal and follow the steps:
+	i.git init.
+	ii.git status.
+	iii.git add -A.
+	iv.git commit -m 'write your comment here'
+	v.heroku login.
+	vi.heroku create 'your_unique_app_name'.
+	vii.heroku git:remote -a your_unique_app_name.
+	viii.git push heroku master.
+	ix.heroku ps:scale web=1
+
+Now you are done
+	
+	
