@@ -4,7 +4,7 @@
 
 3.Install whitenoise in your system => pip3 install whitenoise.
 
-4.Create a file named Procfile in your django projeact directory (P is in uppercase).
+4.Create a file named Procfile in your django project directory (P is in uppercase).
 
 5.Configure settings.py in the following way:
 	i.In INSTALLED_APPS write a new app called 'whitenoise.runserver_nostatic'.
